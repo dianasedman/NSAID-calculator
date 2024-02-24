@@ -3,13 +3,13 @@ body {
   /* background-color: rgb(151, 151, 236); */
   padding-left: 20%;
   padding-right: 20%;
-  padding-top: 1%
+  padding-top: 1%;
 }
 
 .layout-primary {
   /* max-width: calc(100% - 340px - 64px); */
   align-items: center;
-  /* background-color: aquamarine; */
+  background-color: #eeeeee;
   flex: 1 0 auto;
   box-sizing: border-box;
   min-height: 100vh;
@@ -17,12 +17,47 @@ body {
   line-height: 16px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 10%;
 
+}
+
+.heading {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
 }
 
 .content {
   line-height: 1.5;
   max-width: 100%;
   overflow: hidden;
+}
+
+.calculator-background {
+  border: solid 1px black;
+}
+
+.calc-text-background {
+  padding: 10px;
 
 }
+
+.small-cell {
+  width: 200px;
+  display: block;
+}
+
+button {
+border: 1px solid #EA1A1E;
+background-color: #ea1a1e;
+border-radius: 3px;
+color: white;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+
+.result-label {
+  padding-top: 12px ;
+}
+
