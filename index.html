@@ -4,38 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="nav-bar.js" defer></script>
   <title>NSAID calculator</title>
 </head>
+
 <body>
-  <div class="layout-primary">
-    <div class="content">
-
-      <p class="heading">Welcome to NSAID calculator!</p>
-      <div class="calculator-background">
-        <div class="calc-text-background">
-          <div class="calc-column">
-            <label for="leaflet">Vali toode:</label>
-            <select name="leaflet" id="leaflet" class="small-cell">
-              <option value="efferalgan">Efferalgan, 30 mg/ml suukaudne lahus lastele</option>
-              <option value="ibustar">Ibustar, 20 mg/ml suukaudne suspensioon</option>
-              <option value="ibustar-forte">Ibustar forte, 40 mg/ml suukaudne suspensioon</option>
-              <option value="nurofen-orange">Nurofen Forte Orange, 40 mg/ml, suukaudne suspensioon</option>
-              <option value="nurofen-strawberry">Nurofen Forte Strawberry, 40 mg/ml, suukaudne suspensioon</option>
-              <option value="panadol">Panadol, 24 mg/ml suukaudne suspensioon</option>
-            </select>
-          </div>
-          <div class="calc-column">
-            <label for="weight">Kaal(kg):</label>
-            <input type="weight" name="weight" id="weight" class="small-cell">
-          </div>
-          <button onclick="calculate()">ARVUTA</button>
-          <div class="calc-column">
-            <label for="result">Tulemus:</label>
-          </div>
+  <header>
+    <div class="nav-wrapper">
+      <nav>
+        <div class="navigation">
+          <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nsaid-calculator.html">Valuvaigisti kalkulaator</a></li>
+            <li><a href="#">Infoleht</a></li>
+          </ul>
+          <div class="nav-toggler"></div>
         </div>
-
-      </div>
+      </nav>
     </div>
+  </header>
+  <div class="layout">
+    
   </div>
+
 </body>
 </html>

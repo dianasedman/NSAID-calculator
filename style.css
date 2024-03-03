@@ -1,40 +1,178 @@
-body {
+/* navigation bar style */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+header{
+  height: 50px;
+  overflow: hidden;
+}
+
+.nav-wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Manrope", sans-serif;
+  border-radius: 20px;
+
+  /* for background coloring */
+  background: rgba(255, 255, 255, 0.533);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.nav-wrapper::before,
+.nav-wrapper::after{
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50%;
+}
+
+.nav-wrapper nav{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   display: flex;
-  /* background-color: rgb(151, 151, 236); */
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 1%;
+  justify-content: center;
+  align-items: center;
+}
+.navigation{
+  max-width: 500px;
+  line-height: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-wrapper ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 0;
+  overflow: hidden;
+  transition: .4s cubic-bezier(.77,0,.18,1);
+}
+.nav-wrapper.active ul{
+  width: 420px;
+  margin-right: 20px;
+}
+
+a{
+  color: #424242;
+  text-decoration: none;
+  transition: .3s;
+}
+a:hover{
+  color: #ea1a1e;
+  cursor: url(img/cursor.png), auto;
+
+}
+
+.nav-toggler{
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 48px;
+  padding: 14px 5px;
+  cursor: url(img/cursor.png), auto;
+}
+.nav-wrapper:not(.active) .nav-toggler{
+  margin-left: -10px;
+}
+.nav-toggler::before,
+.nav-toggler::after{
+  content: '';
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ea1a1e;
+  transition: .4s cubic-bezier(.77,0,.18,1);
+}
+.nav-toggler::after {
+  margin-top: 10px;
+}
+.nav-wrapper.active .nav-toggler::before,
+.nav-wrapper.active .nav-toggler::after{
+  position: absolute;
+  top: 50%;
+  background-color: #ea1a1e;
+  transform: rotate(135deg);
+}
+.nav-wrapper.active .nav-toggler::after {
+  transform: rotate(-135deg);
+  margin-top: 0;
+}
+
+/* body element */
+
+body {
+  background-color: #fee2f8;
+  background-image: linear-gradient(315deg, #fee2f3 0%, #f6d2d2 74%);
+}
+.layout {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .layout-primary {
-  /* max-width: calc(100% - 340px - 64px); */
-  align-items: center;
-  background-color: #eeeeee;
-  flex: 1 0 auto;
+  /* for box */
   box-sizing: border-box;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  line-height: 16px;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 10%;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
 
+  /* for background coloring */
+  background: rgba(255, 255, 255, 0.533);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: "Manrope", sans-serif;
 }
 
-.heading {
+.layout-leaflet {
+  box-sizing: border-box;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  /* for background coloring */
+  background: rgba(255, 255, 255, 0.533);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: "Manrope", sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+.layout-primary {
+    width: 90%;
+  }
+}
+
+.calculator-title {
   font-size: 20px;
   padding: 10px;
   text-align: center;
 }
 
 .content {
-  line-height: 1.5;
-  max-width: 100%;
-  overflow: hidden;
+  line-height: 2;
 }
 
-.calculator-background {
-  border: solid 1px black;
+.calculator-border {
+  border: solid 1px #ffffff;
 }
 
 .calc-text-background {
@@ -42,9 +180,13 @@ body {
 
 }
 
-.small-cell {
-  width: 200px;
+.input-row {
+  width: 300px;
   display: block;
+  border: 2px solid #fee2f8;
+  box-sizing: border-box; 
+  height: 40px;
+  font-size: 16px;
 }
 
 button {
@@ -52,12 +194,11 @@ border: 1px solid #EA1A1E;
 background-color: #ea1a1e;
 border-radius: 3px;
 color: white;
-padding-left: 10px;
-padding-right: 10px;
+padding: 10px;
+margin-top: 10px;
 }
 
 
 .result-label {
   padding-top: 12px ;
 }
-
