@@ -1,0 +1,98 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.container-right {
+  background-color: #ffe78d;
+  background-image: linear-gradient(315deg, #d3b456 0%, #ffe793 74%);
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  right: 0; /* Position the container on the right side */
+  top: 0; 
+}
+
+.container-left {
+  background-color: #badbe2; 
+  background-image: linear-gradient(315deg, #8fbdc6 0%, #badbe2 74%);
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  left: 0; /* Position the container on the left side */
+  top: 0; 
+}
+
+.button-container {
+  position: absolute;
+  top: 32%;
+  right: 34%;
+  z-index: 1;
+}
+
+
+.button-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 3px 0 rgba(12, 15, 55, 0.37);
+  width: 200px;
+  height: 47px;
+  border-radius: 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  color: black;
+  text-decoration: none;
+
+}
+
+
+.image-container-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.image-container-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+.image-left {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.image-right {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+.button-container:hover + .image-container-right .image-right,
+.button-container:hover + .image-container-left .image-left {
+  transform: translateX(0);
+}
