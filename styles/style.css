@@ -16,10 +16,9 @@ header{
   border-radius: 20px;
 
   /* for background coloring */
-  background: rgba(255, 255, 255, 0.533);
-  backdrop-filter: blur(3.5px);
-  -webkit-backdrop-filter: blur(3.5px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(1.5px);
+  border: 1px solid rgba(255, 255, 255, 0.663);
 }
 .nav-wrapper::before,
 .nav-wrapper::after{
@@ -67,7 +66,7 @@ a{
 }
 a:hover{
   color: #ea1a1e;
-  cursor: url(img/cursor.png), auto;
+  cursor: pointer;
 
 }
 
@@ -77,7 +76,7 @@ a:hover{
   width: 40px;
   height: 48px;
   padding: 14px 5px;
-  cursor: url(img/cursor.png), auto;
+  cursor: pointer;
 }
 .nav-wrapper:not(.active) .nav-toggler{
   margin-left: -10px;
@@ -108,11 +107,6 @@ a:hover{
 }
 
 /* body element */
-
-body {
-  background-color: #fee2f8;
-  background-image: linear-gradient(315deg, #fee2f3 0%, #f6d2d2 74%);
-}
 .layout {
   margin: 0;
   display: flex;
@@ -121,7 +115,7 @@ body {
   min-height: 100vh;
 }
 
-.layout-primary {
+.layout-primary, .faq {
   /* for box */
   box-sizing: border-box;
   max-width: 400px;
@@ -133,7 +127,6 @@ body {
   background: rgba(255, 255, 255, 0.533);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3.5px);
-  -webkit-backdrop-filter: blur(3.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-family: "Manrope", sans-serif;
 }
@@ -159,46 +152,8 @@ body {
 .layout-primary {
     width: 90%;
   }
-}
+  .input-row, #leaflet {
+    max-width: 90%;
 
-.calculator-title {
-  font-size: 20px;
-  padding: 10px;
-  text-align: center;
-}
-
-.content {
-  line-height: 2;
-}
-
-.calculator-border {
-  border: solid 1px #ffffff;
-}
-
-.calc-text-background {
-  padding: 10px;
-
-}
-
-.input-row {
-  width: 300px;
-  display: block;
-  border: 2px solid #fee2f8;
-  box-sizing: border-box; 
-  height: 40px;
-  font-size: 16px;
-}
-
-button {
-border: 1px solid #EA1A1E;
-background-color: #ea1a1e;
-border-radius: 3px;
-color: white;
-padding: 10px;
-margin-top: 10px;
-}
-
-
-.result-label {
-  padding-top: 12px ;
+  }
 }

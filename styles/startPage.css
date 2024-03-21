@@ -17,7 +17,7 @@ body, html {
   width: 50%;
   height: 100vh;
   overflow: hidden;
-  right: 0; /* Position the container on the right side */
+  right: 0; 
   top: 0; 
 }
 
@@ -28,7 +28,7 @@ body, html {
   width: 50%;
   height: 100vh;
   overflow: hidden;
-  left: 0; /* Position the container on the left side */
+  left: 0; 
   top: 0; 
 }
 
@@ -39,7 +39,7 @@ body, html {
   z-index: 1;
 }
 
-
+/* style for a button */
 .button-start {
   display: flex;
   justify-content: center;
@@ -54,9 +54,7 @@ body, html {
   font-size: 22px;
   color: black;
   text-decoration: none;
-
 }
-
 
 .image-container-right {
   position: absolute;
@@ -77,7 +75,6 @@ body, html {
   overflow: hidden;
   z-index: 0;
 }
-
 
 .image-left {
     width: 100%;
