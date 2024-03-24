@@ -1,3 +1,4 @@
+/* Full page style */
 body, html {
   margin: 0;
   padding: 0;
@@ -10,13 +11,17 @@ body, html {
   height: 100vh;
   overflow: hidden;
 }
+
+/* For specific container style */
+
+
 .container-right {
   background-color: #ffe78d;
   background-image: linear-gradient(315deg, #d3b456 0%, #ffe793 74%);
   position: absolute;
   width: 50%;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden;   /* not scrollable */
   right: 0; 
   top: 0; 
 }
@@ -92,4 +97,27 @@ body, html {
 .button-container:hover + .image-container-right .image-right,
 .button-container:hover + .image-container-left .image-left {
   transform: translateX(0);
+}
+
+@media only screen and (max-width: 800px) {
+  .button-start {
+    width: 60%;
+    font-size: small;
+  }
+  .button-container {
+    right: auto;
+    text-align: center;
+    margin-left: 25%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack flex items vertically */
+  height: 100vh; /* Adjust as needed */
+}
+
+.container-right, .container-left {
+  flex: 1;
+
+}
 }

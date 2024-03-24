@@ -57,6 +57,8 @@ header{
 .nav-wrapper.active ul{
   width: 420px;
   margin-right: 20px;
+  text-align: center;
+  align-items: center;
 }
 
 a{
@@ -147,13 +149,20 @@ a:hover{
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-family: "Manrope", sans-serif;
 }
+/* 
+mobile version  */
 
 @media only screen and (max-width: 768px) {
 .layout-primary {
     width: 90%;
   }
-  .input-row, #leaflet {
-    max-width: 90%;
+  .calc-column{
+    max-width: 88%;
 
+  }
+
+  .navigation {
+    max-width: 90%;
+    line-height: normal;
   }
 }

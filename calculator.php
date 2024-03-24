@@ -18,7 +18,8 @@ require ("header.php");
   <div class="layout">
     <div class="layout-primary">
       <div class="content">
-        <p class="calculator-title">Kalkulaator</p>
+        <p class="calculator-title"><strong>KALKULAATOR</strong></p>
+        <p style="font-size: 14px;"><strong>NB!</strong> Kalkulaator on ainult informatiivsel eesmärgil ja manustamisannused tuleb alati eraldi välja arvutada ja kvalifitseeritud personali poolt üle kontrollida.</p>
         <div class="calculator-border">
           <div class="calc-text-background">
             <div class="calc-column">
@@ -74,7 +75,7 @@ require ("header.php");
       </div>
     </div>
   </div>
-  <script src="js/product-menu.js" defer></script>
+  <script src="js/select-menu.js" defer></script>
   <script src="js/calculator.js" defer></script>
 </body>
 </html>

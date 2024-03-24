@@ -29,6 +29,7 @@ body {
 
 .select-menu .select-btn {
   cursor: pointer; 
+  display: flex; 
 }
 
 .select-menu.active .select-btn i{ 
